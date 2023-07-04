@@ -46,7 +46,7 @@ Purpose is to store:
    1) Paste in ssh key
    2) Add SSH key
 
-- Simple clone `git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY`
+Simple clone `git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY`
 
 ## [Branches](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-branches)
 
