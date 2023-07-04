@@ -24,6 +24,30 @@ Purpose is to store:
 - GitHub Actions done by GitHub-hosted runners are [free](https://docs.github.com/en/billing/managing-billing-for-github-actions/about-billing-for-github-actions) for public repositories, not private
 - Each account includes storage and minutes for use with GitHub-hosted runners
 
+### Create Local Repository
+
+*Warning:* Support for password authentication with HTTPS was removed on August 13, 2021.
+
+1) [Generate ssh key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#adding-your-ssh-key-to-the-ssh-agent) (if none exists)
+  `ssh-keygen -t ed25519 -C "your_email@example.com"`
+  or for rsa / legacy system
+  `ssh-keygen -t rsa -b 4096 -C "your_email@example.com"`
+   1) Add [passphrase](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/working-with-ssh-key-passphrases) (recommended)
+2) Start the ssh-agent
+   1) `eval "$(ssh-agent -s)"`
+      [May need to use different command](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent?platform=linux#adding-your-ssh-key-to-the-ssh-agent)
+3) Add ssh key to ssh-agent
+  `ssh-add ~/.ssh/id_ed25519`
+  or whatever the name of your ssh key is
+4) Copy ssh key
+  Linux: `clip < ~/.ssh/id_ed25519.pub`
+  WSL: `cat ~/.ssh/id_ed25519.pub | clip.exe`
+1) [Add ssh key to SSH and GPG keys under "Access" in profile settings](https://github.com/settings/profile)
+   1) Paste in ssh key
+   2) Add SSH key
+
+- Simple clone `git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY`
+
 ## [Branches](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-branches)
 
 > Versions of the repository
@@ -208,3 +232,4 @@ MAJOR.MINOR.PATCH
 - [Managing a Remote Repository](https://docs.github.com/en/get-started/getting-started-with-git/managing-remote-repositories)
 - [Adding Local Code to GitHub](https://docs.github.com/en/migrations/importing-source-code/using-the-command-line-to-import-source-code/adding-locally-hosted-code-to-github)
 - [Deleting and Restoring Branches](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-branches-in-your-repository/deleting-and-restoring-branches-in-a-pull-request)
+- <https://github.com/skills/communicate-using-markdown>
