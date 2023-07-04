@@ -2,11 +2,11 @@
 
 > Platform for code hosting, version control, and collaboration
 
-## Work [flow](https://docs.github.com/en/get-started/quickstart/github-flow)
+## [Work flow](https://docs.github.com/en/get-started/quickstart/github-flow)
 
 ![Example](https://docs.github.com/assets/cb-23923/mw-1440/images/help/repository/branching.webp 'Example of a branch "branching" off of main')
 
-## Repository
+## [Repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/about-repositories)
 
 > Organizes a project and its state
 
@@ -18,7 +18,13 @@ Purpose is to store:
   - Stored as markdown file (md)
 - license file
 
-## Branches
+### Private Repository
+
+- Uses [GitHub Actions](https://docs.github.com/en/actions)
+- GitHub Actions done by GitHub-hosted runners are [free](https://docs.github.com/en/billing/managing-billing-for-github-actions/about-billing-for-github-actions) for public repositories, not private
+- Each account includes storage and minutes for use with GitHub-hosted runners
+
+## [Branches](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-branches)
 
 > Versions of the repository
 
@@ -49,7 +55,7 @@ Shows:
 
 > Propose changes to a repository
 
-i.e. Merge a branch into a branch
+i.e. [Merge](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/merging-a-pull-request) a branch into a branch
 
 Shows:
 
@@ -165,11 +171,36 @@ MAJOR.MINOR.PATCH
 - Figure out what license a project has
   <https://github.com/licensee/licensee>
 
+### Add license to repository
+
+1) Create a new file
+2) Change name to "LICENSE"
+3) Click `Choose a license template`
+4) Click the `Review and submit` green button (on right)
+5) Click `Commit changes...`
+6) Click `Commit changes`
+
+## Markdown Tips
+
+- Link to issues and pull requests within a repository with hashtag before their number ```#123```
+- Automatically generates table of contents
+
 ---
 
 ## First Project
 
 <https://docs.github.com/en/get-started/quickstart/hello-world>
+
+## Profile Setup
+
+### Create a profile README
+
+1. Create a repository named the same as your username, public, with a README.md file.
+2. Put whatever you want, some suggestions
+   - "About me" section describing work and interests
+   - Contributions you're proud of with context
+   - Guidance for getting help in communities where you're involved
+3. May need to go to repository and click the green button for "Share to profile"
 
 ## Further Reading
 
