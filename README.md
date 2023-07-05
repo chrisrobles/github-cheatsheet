@@ -13,10 +13,12 @@
 Purpose is to store:
 
 - folders and files for project
-- README file
-  - Summarizes and gives useful info on the project
-  - Stored as markdown file (md)
-- license file
+- README.md file for project's
+  - Name
+  - Description
+  - How to get started contributing
+  - Links to other relevant documentation, such as architecture overview
+- LICENSE file
 
 ### Private Repository
 
@@ -46,7 +48,16 @@ Purpose is to store:
    1) Paste in ssh key
    2) Add SSH key
 
-- Simple clone `git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY`
+### Simple clone with no link
+
+`git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY`
+
+#### Authenticating with GitHub from Git
+
+- Connecting over HTTPS
+  - cache GitHub credentials in Git using a credential helper
+- Connecting over [SSH](https://docs.github.com/en/authentication/connecting-to-github-with-ssh)
+  - ssh keys
 
 ## [Branches](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-branches)
 
@@ -81,32 +92,31 @@ Shows:
 
 i.e. [Merge](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/merging-a-pull-request) a branch into a branch
 
+Creation:
+
+- Title of pull request (Release v1.0)
+- Description of the changes made
+- Reference to an issue the pull request addresses
+- @mentions of the person or team responsible for reviewing proposed changes
+
 Shows:
 
-- differences of both branches
-  - ONLY AT THE CREATION OF THE PULL REQUEST
-- commits on branch being merged in
-- files changed
-- checks
-- conversation
+- Conversation
+- Commits that differ from base branch
+- Checks
+- File differences of both branches
+  - ONLY THE DIFFS AT THE CREATION OF THE PULL REQUEST
+
+Tips:
+
+- Can create pull request templates
 
 ## Forks
 
 > personal copy of another's repository
 
-- Sync fork -> upstream ### Close issues from pull request message
-
-Keywords: close closes closed fix fixes fixed resolve resolves resolved
-
-- **Issue in the same repository**
-  KEYWORD #ISSUE-NUMBER
-  ```Closes #10```
-- **Issue in a different repository**
-  KEYWORD OWNER/REPOSITORY#ISSUE-NUMBER
-  ```Fixes octo-org/octo-repo#100```
-- **Multiple issues**
-  ```Resolves #10, closes #123, fixes octo-org/octo-repo#100```
-  - by making a pull request
+- Sync fork -> upstream
+  - make a pull request on upstream
 - Sync upstream -> fork
   - Terminal: ```git fetch upstream```
     - Creates ```upstream/main``` branch
@@ -166,14 +176,14 @@ Good for small teams and organizations collaborating on private projects
 - Boilerplate
   - <https://gist.github.com/octocat/9257657>
 
-## Authenticating with GitHub from Git
+## Releases
 
-- Connecting over HTTPS (recommended)
-  - cache GitHub credentials in Git using a credential helper
-- Connecting over [SSH](https://docs.github.com/en/authentication/connecting-to-github-with-ssh)
-  - ssh keys
+- Tag should be semantic versioned.
+- Title should state what version is being released
+- Notes should state what was changed.
+  - Just click `Generate Release Notes`
 
-## Semantic Versioning
+### Semantic Versioning
 
 MAJOR.MINOR.PATCH
 
@@ -182,6 +192,13 @@ MAJOR.MINOR.PATCH
 3) PATCH = backward compatible bug fixes
 
 <https://semver.org/>
+
+| Code status                     | Stage         | Rule                                                                   | Example version |
+| ------------------------------- | ------------- | ---------------------------------------------------------------------- | --------------- |
+| First release                   | New product   | Start with 1.0.0                                                       | 1.0.0           |
+| Backward compatible fix         | Patch release | Increment the third digit                                              | 1.0.1           |
+| Backward compatible new feature | Minor release | Increment the middle digit and reset the last digit to zero            | 1.1.0           |
+| Breaking updates                | Major release | Increment the first digit and reset the middle and last digits to zero | 2.0.0           |
 
 ## License
 
@@ -206,7 +223,9 @@ MAJOR.MINOR.PATCH
 
 ## Markdown Tips
 
-- Link to issues and pull requests within a repository with hashtag before their number ```#123```
+- Link to issues and pull requests within a repository with hashtag before their number 
+  - ```#123```
+  - This will create a two-way reference
 - Automatically generates table of contents
 
 ---
@@ -232,4 +251,5 @@ MAJOR.MINOR.PATCH
 - [Managing a Remote Repository](https://docs.github.com/en/get-started/getting-started-with-git/managing-remote-repositories)
 - [Adding Local Code to GitHub](https://docs.github.com/en/migrations/importing-source-code/using-the-command-line-to-import-source-code/adding-locally-hosted-code-to-github)
 - [Deleting and Restoring Branches](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-branches-in-your-repository/deleting-and-restoring-branches-in-a-pull-request)
-- <https://github.com/skills/communicate-using-markdown>
+- [Create your own GitHub Skills Actions-Powered Courses ](https://skills.github.com/quickstart)
+- [Code with GitHub Copilot Project](https://github.com/skills/copilot-codespaces-vscode)
