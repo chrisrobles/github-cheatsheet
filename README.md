@@ -44,7 +44,7 @@ Purpose is to store:
 4) Copy ssh key
   Linux: `clip < ~/.ssh/id_ed25519.pub`
   WSL: `cat ~/.ssh/id_ed25519.pub | clip.exe`
-1) [Add ssh key to SSH and GPG keys under "Access" in profile settings](https://github.com/settings/profile)
+5) [Add ssh key to SSH and GPG keys under "Access" in profile settings](https://github.com/settings/profile)
    1) Paste in ssh key
    2) Add SSH key
 
@@ -223,7 +223,7 @@ MAJOR.MINOR.PATCH
 
 ## Markdown Tips
 
-- Link to issues and pull requests within a repository with hashtag before their number 
+- Link to issues and pull requests within a repository with hashtag before their number
   - ```#123```
   - This will create a two-way reference
 - Automatically generates table of contents
