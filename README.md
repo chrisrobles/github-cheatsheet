@@ -110,10 +110,18 @@ Shows:
 Tips:
 
 - Can create pull request templates
+- Link to issues and pull requests within a repository with..
+  - ```#123``` or #name of the pull request / issue
+  - This will create a two-way reference
 
 ## Forks
 
 > personal copy of another's repository
+
+- done to get a local copy separate from the commiters upstream
+- forker may
+  - want to go their own way unique to their vision 
+  - need to fork in order to contribute
 
 - Sync fork -> upstream
   - make a pull request on upstream
@@ -162,6 +170,10 @@ Good for small teams and organizations collaborating on private projects
 - Collaborators granted push access to a single shared repository
 - Branches created for topics and changes that need to be made
 - Allows for code reviews and discussion about pull requests before merged into main
+
+## git blame
+
+Shows what revision and author last modified each line of a file
 
 ## .gitignore
 
@@ -223,9 +235,6 @@ MAJOR.MINOR.PATCH
 
 ## Markdown Tips
 
-- Link to issues and pull requests within a repository with hashtag before their number
-  - ```#123```
-  - This will create a two-way reference
 - Automatically generates table of contents
 
 ---
@@ -251,5 +260,5 @@ MAJOR.MINOR.PATCH
 - [Managing a Remote Repository](https://docs.github.com/en/get-started/getting-started-with-git/managing-remote-repositories)
 - [Adding Local Code to GitHub](https://docs.github.com/en/migrations/importing-source-code/using-the-command-line-to-import-source-code/adding-locally-hosted-code-to-github)
 - [Deleting and Restoring Branches](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-branches-in-your-repository/deleting-and-restoring-branches-in-a-pull-request)
-- [Create your own GitHub Skills Actions-Powered Courses ](https://skills.github.com/quickstart)
+- [Create your own GitHub Skills Actions-Powered Courses](https://skills.github.com/quickstart)
 - [Code with GitHub Copilot Project](https://github.com/skills/copilot-codespaces-vscode)
