@@ -120,7 +120,7 @@ Tips:
 
 - done to get a local copy separate from the commiters upstream
 - forker may
-  - want to go their own way unique to their vision 
+  - want to go their own way unique to their vision
   - need to fork in order to contribute
 
 - Sync fork -> upstream
