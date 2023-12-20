@@ -114,6 +114,10 @@ Tips:
   - ```#123``` or #name of the pull request / issue
   - This will create a two-way reference
 
+## Remote
+
+`git remote rm <remote-name>`
+
 ## Forks
 
 > personal copy of another's repository
